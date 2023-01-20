@@ -27,7 +27,6 @@ import PageLayout from "../components/page-layout";
 import StaticMap from "../components/static-map";
 import Favicon from "../public/yext-favicon.ico";
 import "../index.css";
-
 /**
  * Required when Knowledge Graph data is used for a template.
  */
@@ -45,9 +44,9 @@ export const config: TemplateConfig = {
       "mainPhone",
       "description",
       "hours",
-      "slug",
-      "geocodedCoordinate",
-      "services",
+      "c_details",
+      // "c_locationimage"
+      
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -144,7 +143,19 @@ const Location: Template<TemplateRenderProps> = ({
     geocodedCoordinate,
     services,
     description,
+    c_details,
+    // c_locationimage
   } = document;
+  const[data,setData]=React.useState([]);
+React.useEffect(()=>{
+  fetch(
+    "https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=516ca7869d70e6b97458f4c534ed4983&v=20230110&entityTypes=location")
+                .then((res) => res.json())
+                .then((json) => {
+                  setData(json.response.entities)
+
+                })
+              });
 
   return (
     <>
@@ -154,11 +165,12 @@ const Location: Template<TemplateRenderProps> = ({
           <div className="section">
             <div className="grid grid-cols-2 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-2">
-                <Details address={address} phone={mainPhone}></Details>
-                {services && <List list={services}></List>}
+                {/* <Details address={address} phone={mainPhone}></Details>
+                {services && <List list={services}></List>} */}
               </div>
               <div className="bg-gray-100 p-2">
-                {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
+                {/* {hours && <Hours title={"Restaurant Hours"} hours={hours} />} */}
+
               </div>
               {geocodedCoordinate && (
                 <StaticMap
@@ -169,13 +181,31 @@ const Location: Template<TemplateRenderProps> = ({
               <div className="bg-gray-100 p-2">
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
                 <p className="pt-4">{description}</p>
+
+                {c_details?.image.map((i:any)=>{
+                      return (
+                    <img src={i.url} className="card-img-top" alt="..."/>
+                    )
+                  } )}
+
+               <div><a href="{c_details?.name?.url}">Dotsquares</a></div> 
+                    <div>{c_details?.description}</div> 
+               <a href="{c_details?.name?.url}" className="btn btn-primary">Contect Us</a>
               </div>
             </div>
           </div>
         </div>
+       
+        {/* {c_location_image?.map((i:any)=>{
+                      return (
+                    <img src={i.url} className="card-img-top" alt="..."/>
+                    )
+                  } )} */}
+          {/* <img src={c_locationimage?.url} ></img>           */}
       </PageLayout>
     </>
   );
 };
 
 export default Location;
+ 

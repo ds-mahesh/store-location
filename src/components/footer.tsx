@@ -1,76 +1,79 @@
 import * as React from "react";
-
+import "./bootstrap.min.css";
+import "./all.min.js";
 const Footer = () => {
   return (
-    <footer className="">
-      <div className="flex flex-col flex-wrap justify-center p-5 md:flex-row">
-        <span className="inline-flex justify-center w-full mx-auto mt-2 mr-2 sm:ml-auto sm:mt-0 space-x-3">
-          <a className="text-black hover:text-blue-500">
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-          <a className="text-black hover:text-blue-500">
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-          </a>
-          <a className="text-black hover:text-blue-500">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-            </svg>
-          </a>
-          <a className="text-black hover:text-blue-500">
-            <svg
-              fill="currentColor"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="0"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="none"
-                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-              ></path>
-              <circle cx="4" cy="4" r="2" stroke="none"></circle>
-            </svg>
-          </a>
-        </span>
-      </div>
-      <div className="w-full px-8 mt-4 rounded-b-lg bg-blueGray-50">
-        <div className="container inline-flex flex-col flex-wrap items-center px-5 py-6 mx-auto sm:flex-row">
-          <p className="mx-auto text-sm text-center text-black sm:text-left ">
-            {" "}
-            © 2021{" "}
-          </p>
+   <>
+    <div className="container-fluid bg-secondary py-5 px-sm-3 px-md-5" >
+        <div className="row pt-5">
+            <div className="col-lg-3 col-md-6 mb-5">
+                <h4 className="text-uppercase text-light mb-4">Get In Touch</h4>
+                <p className="mb-2"><i className="fa fa-map-marker-alt text-white mr-3"></i>Dotsquares, USA</p>
+                <p className="mb-2"><i className="fa fa-phone-alt text-white mr-3"></i>+012 345 67890</p>
+                <p><i className="fa fa-envelope text-white mr-3"></i>info@example.com</p>
+                <h6 className="text-uppercase text-white py-2">Follow Us</h6>
+                <div className="d-flex justify-content-start">
+                    <a className="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i className="fab fa-twitter"></i></a>
+                    <a className="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i className="fab fa-facebook-f"></i></a>
+                    <a className="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i className="fab fa-linkedin-in"></i></a>
+                    <a className="btn btn-lg btn-dark btn-lg-square" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+                <h4 className="text-uppercase text-light mb-4">Usefull Links</h4>
+                <div className="d-flex flex-column justify-content-start">
+                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
+                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
+                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
+                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
+                    <a className="text-body" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
+                </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+                <h4 className="text-uppercase text-light mb-4">Dotsquares Gallery</h4>
+                <div className="row mx-n1">
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-1.jpg" alt=""/></a>
+                    </div>
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-2.jpg" alt=""/></a>
+                    </div>
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-3.jpg" alt=""/></a>
+                    </div>
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-4.jpg" alt=""/></a>
+                    </div>
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-5.jpg" alt=""/></a>
+                    </div>
+                    <div className="col-4 px-1 mb-2">
+                        <a href=""><img className="w-100" src="img/gallery-6.jpg" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+                <h4 className="text-uppercase text-light mb-4">Newsletter</h4>
+                <p className="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <div className="w-100 mb-3">
+                    <div className="input-group">
+                        <input type="text" className="form-control bg-dark border-dark"  placeholder="Your Email"/>
+                        <div className="input-group-append">
+                            <button className="btn btn-primary text-uppercase px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+                <i>Lorem sit sed elitr sed kasd et</i>
+            </div>
         </div>
-      </div>
-    </footer>
+    </div>
+    <div className="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+        <p className="mb-2 text-center text-body">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+        <p className="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+    {/* <!-- Footer End --> */}
+    </>
   );
 };
 
