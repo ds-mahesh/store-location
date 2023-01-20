@@ -9,8 +9,8 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 mb-5">
                 <h4 className="text-uppercase text-light mb-4">Get In Touch</h4>
                 <p className="mb-2"><i className="fa fa-map-marker-alt text-white mr-3"></i>Dotsquares, USA</p>
-                <p className="mb-2"><i className="fa fa-phone-alt text-white mr-3"></i>+012 345 67890</p>
-                <p><i className="fa fa-envelope text-white mr-3"></i>info@example.com</p>
+                <p className="mb-2"><i className="fa fa-phone-alt text-white mr-3"></i>+0141 265 1369</p>
+                <p><i className="fa fa-envelope text-white mr-3"></i><a href="https://www.dotsquares.com/">info@dotsquares.com </a></p>
                 <h6 className="text-uppercase text-white py-2">Follow Us</h6>
                 <div className="d-flex justify-content-start">
                     <a className="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i className="fab fa-twitter"></i></a>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
                     <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
                     <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
-                    <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                    {/* <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a> */}
                     <a className="text-body mb-2" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
                     <a className="text-body" href="#"><i className="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
                 </div>
@@ -34,22 +34,22 @@ const Footer = () => {
                 <h4 className="text-uppercase text-light mb-4">Dotsquares Gallery</h4>
                 <div className="row mx-n1">
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-1.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-2.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-3.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-4.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-5.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                     <div className="col-4 px-1 mb-2">
-                        <a href=""><img className="w-100" src="img/gallery-6.jpg" alt=""/></a>
+                        <a href=""><img className="w-100" src="" alt=""/></a>
                     </div>
                 </div>
             </div>

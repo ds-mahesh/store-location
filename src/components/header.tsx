@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <>
-    <div className="bg-top">
+    <div className="bg-info bg-gradient">
      
       
       {/* <!-- Facebook --> */}
@@ -58,19 +58,20 @@ const Header = () => {
 <a className="btn btn-primary m-3 p-3"  href="#!" role="button"
   ><i className="fab fa-instagram"></i></a>
 
+
+
       </div>
       <div className="top-detailse">
 
-      
     </div>
-    <div className="bg-gray-50">
-      <div className="centered-container bg-secondary bg-gradient">
+    <div className="d-block p-2 bg-primary text-white">
+      <div className="centered-container">
         <nav className="py-6 flex items-center justify-between">
           <div className="flex gap-x-4 items-center">
-            <img
-              src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
-              width="50"
-              height="50"
+            <img className="rounded mx-auto d-block"
+              src="https://4.bp.blogspot.com/-pMbXD7F9IF8/UVIDSiDqGxI/AAAAAAAAEIc/Ohs73VGP5u8/s1600/logo+sample+design+(10).jpg"
+              width="100"
+              height="100"
             ></img>
             {/* <div className="flex gap-x-4 text-sm font-semibold text-body">
               {linkDoms}

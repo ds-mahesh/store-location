@@ -32,7 +32,7 @@ const Banner = (props: Banner) => {
   return (
     <>
       <div
-        className={`relative z-10 w-full bg-cover bg-center h-96 bg-[url(/src/assets/images/download.jfif)] `}
+        className={`relative z-10 w-full bg-cover bg-center h-96 bg-[url(/src/assets/images/restaurant.jpg)] `}
       >
         <div className="absolute left-0 right-0 flex flex-col items-center ">
           <div className="w-96 my-8 rounded-xl bg-danger bg-transparent text-center">

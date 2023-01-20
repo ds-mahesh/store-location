@@ -45,7 +45,9 @@ export const config: TemplateConfig = {
       "description",
       "hours",
       "c_details",
-      // "c_locationimage"
+      // "c_locationimage",
+      "menuUrl",
+      //  "logo",
       
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -144,7 +146,9 @@ const Location: Template<TemplateRenderProps> = ({
     services,
     description,
     c_details,
-    // c_locationimage
+    // c_locationimage,
+    menuUrl,
+    //  logo
   } = document;
   const[data,setData]=React.useState([]);
 React.useEffect(()=>{
@@ -159,18 +163,18 @@ React.useEffect(()=>{
 
   return (
     <>
+   
       <PageLayout _site={_site}>
         <Banner name={name} address={address} />
-        <div className="centered-container">
+        <div className="container-fluid gfg p-3 mb-2 bg-warning bg-gradient ">
           <div className="section">
             <div className="grid grid-cols-2 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-2">
-                { <Details address={address} phone={mainPhone}></Details>
-                {services && <List list={services}></List>} }
+                 <Details address={address} phone={mainPhone}></Details>
+                 {services && <List list={services}></List>}                
               </div>
               <div className="bg-gray-100 p-2">
-                { {hours && <Hours title={"Restaurant Hours"} hours={hours} />} }
-
+                 {hours && <Hours title={"Restaurant Hours"} hours={hours} />} 
               </div>
               {geocodedCoordinate && (
                 <StaticMap
@@ -181,28 +185,23 @@ React.useEffect(()=>{
               <div className="bg-gray-100 p-2">
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
                 <p className="pt-4">{description}</p>
-
                 {c_details?.image.map((i:any)=>{
                       return (
                     <img src={i.url} className="card-img-top" alt="..."/>
                     )
-                  } )}
-
+                  } )}              
                <div><a href="{c_details?.name?.url}">Dotsquares</a></div> 
                     <div>{c_details?.description}</div> 
                <a href="{c_details?.name?.url}" className="btn btn-primary">Contect Us</a>
+               <a href="{menuUrl?.url}" className="btn btn-primary">Menu</a>
               </div>
             </div>
           </div>
         </div>
-       
-        {/* {c_location_image?.map((i:any)=>{
-                      return (
-                    <img src={i.url} className="card-img-top" alt="..."/>
-                    )
-                  } )} */}
-          {/* <img src={c_locationimage?.url} ></img>           */}
+        {/* <img src={logo?.url} alt=""/>  */}
       </PageLayout>
+      {/*<img src={c_locationimage?.url} alt=""/> */}
+      
     </>
   );
 };
