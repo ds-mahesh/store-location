@@ -165,11 +165,11 @@ React.useEffect(()=>{
           <div className="section">
             <div className="grid grid-cols-2 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-2">
-                {/* <Details address={address} phone={mainPhone}></Details>
-                {services && <List list={services}></List>} */}
+                { <Details address={address} phone={mainPhone}></Details>
+                {services && <List list={services}></List>} }
               </div>
               <div className="bg-gray-100 p-2">
-                {/* {hours && <Hours title={"Restaurant Hours"} hours={hours} />} */}
+                { {hours && <Hours title={"Restaurant Hours"} hours={hours} />} }
 
               </div>
               {geocodedCoordinate && (
